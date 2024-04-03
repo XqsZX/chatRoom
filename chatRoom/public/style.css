@@ -1,0 +1,98 @@
+/* 全局样式 */
+body {
+  font-family: Arial, sans-serif; /* 使用无衬线字体 */
+  background-color: white; /* 背景色设为白色 */
+  color: black; /* 文字颜色设为黑色 */
+  margin: 0;
+  padding: 20px; /* 页面内容与边界的间距 */
+}
+
+h1 {
+  text-align: center; /* 标题居中对齐 */
+}
+
+/* 输入框样式 */
+input[type="text"],
+input[type="password"],
+input[type="file"] {
+  width: calc(100% - 22px); /* 输入框宽度自适应 */
+  padding: 10px; /* 内边距 */
+  margin: 10px 0; /* 外边距 */
+  box-sizing: border-box; /* 盒模型设定 */
+  border: 1px solid #ccc; /* 边框颜色 */
+  border-radius: 4px; /* 边框圆角 */
+}
+
+/* 按钮样式 */
+button {
+  background-color: black; /* 背景色设为黑色 */
+  color: white; /* 文字颜色设为白色 */
+  padding: 10px 20px; /* 内边距 */
+  margin: 10px 0; /* 外边距 */
+  border: none; /* 无边框 */
+  cursor: pointer; /* 鼠标悬停时显示手形图标 */
+  text-align: center; /* 文字居中 */
+  display: inline-block; /* 行内块级元素 */
+  border-radius: 4px; /* 边框圆角 */
+}
+
+button:hover {
+  background-color: #333; /* 鼠标悬停时背景色变暗 */
+}
+
+/* 用户列表和消息列表样式 */
+#userList, #messages {
+  list-style: none; /* 移除列表默认样式 */
+  padding: 0;
+  margin: 10px 0; /* 外边距 */
+  max-height: 300px; /* 最大高度 */
+  overflow-y: auto; /* 超出部分显示滚动条 */
+}
+
+#userList li, #messages li {
+  padding: 5px; /* 内边距 */
+  border-bottom: 1px solid #ccc; /* 底部边框 */
+}
+
+/* 聊天界面和文件分享界面样式 */
+#chatInterface, #fileShare, #privateMessaging {
+  border: 1px solid #ccc; /* 边框颜色 */
+  padding: 10px; /* 内边距 */
+  margin-top: 20px; /* 顶部外边距 */
+  border-radius: 4px; /* 边框圆角 */
+}
+
+/* 夜间模式样式 */
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+.dark-mode input[type="text"],
+.dark-mode input[type="password"],
+.dark-mode input[type="file"] {
+  background-color: #333;
+  color: white;
+  border: 1px solid #666;
+}
+
+.dark-mode button {
+  background-color: white;
+  color: black;
+}
+
+.dark-mode button:hover {
+  background-color: #ddd;
+}
+
+.dark-mode #userList li,
+.dark-mode #messages li {
+  border-bottom: 1px solid #666;
+}
+
+.dark-mode #chatInterface,
+.dark-mode #fileShare,
+.dark-mode #privateMessaging {
+  border: 1px solid #666;
+}
+

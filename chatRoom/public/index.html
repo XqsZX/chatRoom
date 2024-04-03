@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chat Room</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Chat Room</h1>
+  <button id="toggleDarkMode">Toggle Dark Mode</button>
+  <div id="mainInterface">
+    <label for="username">Username:</label>
+    <input type="text" id="username" placeholder="Enter your username">
+    <button id="connect">Connect</button>
+
+    <input type="text" id="roomName" placeholder="Room Name">
+    <input type="password" id="roomPassword" placeholder="Password (optional for private rooms)">
+    <button id="createRoom">Create Room</button>
+    <button id="joinRoom">Join Room</button>
+  </div>
+
+  <div id="chatInterface" style="display: none;">
+    <button id="leaveRoom">Leave Room</button> <!-- 用户可以点击此按钮离开房间 -->
+    <ul id="userList"></ul> <!-- 用户列表，踢人和封禁按钮将动态添加到这里 -->
+
+    <input type="text" id="messageInput" placeholder="Type a message...">
+    <button id="sendMessage">Send</button>
+    <ul id="messages"></ul>
+  </div>
+
+  <div id="privateMessaging">
+    <input type="text" id="privateMsgRecipient" placeholder="Recipient's username">
+    <input type="text" id="privateMessage" placeholder="Private message">
+    <button id="sendPrivateMessage">Send Private Message</button>
+  </div>
+
+  <div id="fileShare">
+    <input type="file" id="fileInput" multiple>
+    <input type="hidden" id="usernameInput" name="username" value="">
+    <button id="sendFile">Send File</button>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="chat.js"></script>
+</body>
+</html>
